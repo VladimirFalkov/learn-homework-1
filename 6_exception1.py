@@ -9,23 +9,17 @@
   и завершала работу при помощи оператора break
     
 """
-import atexit
-
-def goodbye():
-    
-    print( "Пока!")
-
-
-
-
-
 def hello_user(word):
   phrase = input('Как дела? ')
   while phrase != word:
     phrase = input('Как дела? ')
-    atexit.register(goodbye)
-    break
+    
 
     
 if __name__ == "__main__":
-    hello_user("Хорошо")
+    try:   
+        hello_user("Хорошо")
+    except KeyboardInterrupt:
+        print()
+        print("Пока!")
+   
