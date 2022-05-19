@@ -9,12 +9,23 @@
   и завершала работу при помощи оператора break
     
 """
+import atexit
 
-def hello_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+def goodbye():
+    
+    print( "Пока!")
+
+
+
+
+
+def hello_user(word):
+  phrase = input('Как дела? ')
+  while phrase != word:
+    phrase = input('Как дела? ')
+    atexit.register(goodbye)
+    break
+
     
 if __name__ == "__main__":
-    hello_user()
+    hello_user("Хорошо")
