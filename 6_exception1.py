@@ -9,16 +9,18 @@
   и завершала работу при помощи оператора break
     
 """
-def hello_user(word):
-  phrase = input('Как дела? ')
-  while phrase != word:
+def hello_user():
+  while True:
     phrase = input('Как дела? ')
+    if phrase == "Хорошо":
+        break
+   
     
 
     
 if __name__ == "__main__":
     try:   
-        hello_user("Хорошо")
+        hello_user()
     except KeyboardInterrupt:
         print()
         print("Пока!")
