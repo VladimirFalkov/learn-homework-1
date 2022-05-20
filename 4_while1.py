@@ -9,10 +9,14 @@
    
 """
 def hello_user(word):
+  while True:
     phrase = input('Как дела? ')
-    while phrase != word:
-        phrase = input('Как дела? ') 
+    if phrase == word:
+        break
+   
+    
 
     
 if __name__ == "__main__":
     hello_user("Хорошо")
+    
