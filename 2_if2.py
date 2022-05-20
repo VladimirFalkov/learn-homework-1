@@ -15,18 +15,24 @@
 
 """
 
-def main():
-	first_str = input()
-	second_str = input()
+def main(first_str, second_str):
+	#first_str = input()
+	#second_str = input()
 	if type(first_str) != str and type(second_str) != str:
-		print(0)
-	if first_str == second_str:
-		print(1)
-	if first_str != second_str and len(first_str) > len(second_str):
-		print(2)
-	if first_str != second_str and second_str == "learn":
-		print(3)
+		return(0)
+	elif first_str == second_str:
+		return(1)
+	elif first_str != second_str and len(first_str) > len(second_str):
+		return(2)
+	elif first_str != second_str and second_str == "learn":
+		return(3)
   
     
 if __name__ == "__main__":
-    main()
+    
+	print(main('qwerty', 'uio'))
+	print(main('qwerty', 'qwerty'))
+	print(main('qw', 'uio'))
+	print(main('qwert', 'learn'))
+	print(main('learn', 'learn'))
+	print(main(123, 456))
